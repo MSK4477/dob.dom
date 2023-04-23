@@ -23,7 +23,7 @@ var input=document.getElementById("dob").value
 console.log(typeof(input))
 
 var birthdate=new Date(input)
-console.log(birthdate)
+// console.log(birthdate)
 
 var currentdate=new Date()
 console.log(currentdate)
@@ -51,6 +51,8 @@ var final=document.createElement("div")
 final.style.textAlign="center"
 final.style.marginTop="0px"
 final.style.fontWeight="bold"
+var given=document.createElement("div")
+given.textContent=`BirthDate:${birthdate}`
  var ms=document.createElement("div")
  ms.textContent=`milliSecond:${milsec}`
  var s=document.createElement("div")
@@ -66,6 +68,7 @@ mn.innerText=`Months:${month}`
 var yr=document.createElement("div")
 yr.innerText=`Year:${year}`
 
- final.append(ms,s,mi,hr,da,mn,yr)
+ final.append(given,ms,s,mi,hr,da,mn,yr)
  document.body.append(final)
+ console.log(birthdate)
 })
